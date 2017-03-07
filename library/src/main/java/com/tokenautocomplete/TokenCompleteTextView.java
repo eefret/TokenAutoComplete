@@ -1337,10 +1337,10 @@ public abstract class TokenCompleteTextView<T> extends MultiAutoCompleteTextView
                 ArrayList<TokenImageSpan> spansToRemove = new ArrayList<>();
                 for (TokenImageSpan token : spans) {
                     if (text.getSpanStart(token) < end && start < text.getSpanEnd(token)) {
-                        getViewForObject(token.getToken()).setSelected(true);
                         if(getViewForObject(token.getToken()).isSelected()) {
                             spansToRemove.add(token);
                         }
+                        getViewForObject(token.getToken()).setSelected(true);
                     }
                 }
                 this.spansToRemove = spansToRemove;
