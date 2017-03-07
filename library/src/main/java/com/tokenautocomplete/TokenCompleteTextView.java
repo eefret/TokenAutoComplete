@@ -1341,6 +1341,7 @@ public abstract class TokenCompleteTextView<T> extends MultiAutoCompleteTextView
                             spansToRemove.add(token);
                         }
                         token.view.setSelected(true);
+                        invalidate();
                     }
                 }
                 this.spansToRemove = spansToRemove;
